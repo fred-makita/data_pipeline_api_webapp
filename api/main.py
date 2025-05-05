@@ -53,7 +53,7 @@ def read_movie(movie_id: int = Path(..., description="L'identifiant unique du fi
     movie = helpers.get_movie(db, movie_id)
     if movie is None:
         raise HTTPException(
-            status_code=404, detail=f"Film avec l'ID {"movie_id"} non trouvé")
+            status_code=404, detail=f"Film avec l'ID {{movie_id}} non trouvé")
     return movie
 
 
